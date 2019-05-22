@@ -9,16 +9,16 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode *p1=new ListNode(0),*p2=new ListNode(0);
-        p1->next=p2->next=head;
+        auto h=ListNode(0);
+        h.next=head;
+        auto p1=&h,p2=&h;
         for(int i=0;i<=n;++i)
             p1=p1->next;
-        head=p2;
-        while(p1!=NULL){
-            head=head->next;
+        while(p1){
+            p2=p2->next;
             p1=p1->next;
         }
-        head->next=head->next->next;
-        return p2->next;
+        p2->next=p2->next->next;
+        return h.next;
     }
 };
