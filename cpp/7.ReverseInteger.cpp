@@ -14,7 +14,7 @@ public:
         return value;
     }
 };
-class SolutionB { // 0ms
+class SolutionB { // 0ms 100%
 public:
     int reverse(int x) {
         auto s=to_string(x<0?-(long long)x:x);

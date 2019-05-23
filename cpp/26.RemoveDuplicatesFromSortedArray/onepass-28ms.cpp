@@ -9,3 +9,9 @@ public:
         return i+1;
     }
 };
+class Solution { // using stl, 24ms
+public:
+    int removeDuplicates(vector<int>& nums) {
+        return unique(nums.begin(),nums.end())-nums.begin();
+    }
+};
