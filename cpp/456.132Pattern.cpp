@@ -33,3 +33,21 @@ public:
         return false;
     }
 };
+class Solution {
+//Runtime: 24 ms, faster than 88.49% of C++ online submissions for 132 Pattern.
+//Memory Usage: 10.3 MB, less than 60.77% of C++ online submissions for 132 Pattern.
+public:
+    bool find132pattern(vector<int>& nums) {
+        int s3 = INT_MIN;
+        stack<int> st;
+        for(auto it=rbegin(nums);it!=rend(nums);++it){
+            if( *it < s3 ) return true;
+            else while( !st.empty() && *it > st.top() ){ 
+                s3 = st.top();
+                st.pop(); 
+            }
+            st.push(*it);
+        }
+        return false;
+    }
+};
