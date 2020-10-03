@@ -10,7 +10,7 @@ public:
         return *it;
     }
 };
-class Solution {
+class Solution2 {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
         vector<int>res;
