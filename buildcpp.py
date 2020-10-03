@@ -9,6 +9,6 @@ for cpp in cpps:
         code += f.readlines()
     with open("a.cpp", "w") as f:
         f.writelines(code)
-    cmd = "g++ -o a.so a.cpp -std=c++11"
+    cmd = "g++ -o -shared a.so a.cpp -std=c++11"
     if 0 != os.system(cmd):
         exit(-1)
