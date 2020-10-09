@@ -1,0 +1,19 @@
+name: code style check
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup tools
+      run: apt-get install clang-format
+    - name: c++ code style check
+      run: clang-format --style=llvm --dry-run --Werror ./cpp/*.cpp

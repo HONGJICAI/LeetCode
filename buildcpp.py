@@ -1,7 +1,7 @@
 import glob
 import os
 
-cpps = glob.glob("cpp/**/*.cpp")
+cpps = glob.glob("cpp/*.cpp")
 for cpp in cpps:
     print(cpp)
     code = '''
