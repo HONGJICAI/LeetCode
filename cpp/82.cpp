@@ -31,3 +31,23 @@ public:
     return head;
   }
 };
+
+class Solution2 {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        ListNode h(0, head);
+        auto p = &h;
+        while(p->next) {
+            if(auto temp = p->next->next; temp != nullptr) {
+                if (p->next->val == temp->val) {
+                    while (temp && p->next->val == temp->val)
+                        temp = temp->next;
+                    p->next = temp;
+                    continue;
+                }
+            }
+            p = p->next;
+        }
+        return h.next;
+    }
+};

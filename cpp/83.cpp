@@ -9,16 +9,15 @@
  */
 class Solution {
 public:
-  ListNode *deleteDuplicates(ListNode *head) {
-    ListNode *p = head, *temp;
-    if (p == NULL)
-      return p;
-    while (p->next != NULL) {
-      if (p->next->val == p->val) {
-        p->next = p->next->next;
-      } else
-        p = p->next;
+    ListNode* deleteDuplicates(ListNode* head) {
+        if (head == nullptr)
+            return head;        
+        for (auto p = head; p->next != nullptr;) {
+            if (p->next->val == p->val)
+                p->next = p->next->next;
+            else
+                p = p->next;
+        }
+        return head;
     }
-    return head;
-  }
 };

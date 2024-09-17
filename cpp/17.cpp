@@ -20,3 +20,25 @@ public:
       dfs(letter, res, digits, cur + letter[digits[i] - '0'][j], i + 1);
   }
 };
+class Solution2 {
+    vector<string> combine(vector<string> &a, vector<string> &b) {
+        vector<string> res;
+        for (auto &i : a) {
+            for (auto &j : b) {
+                res.push_back(i + j);
+            }
+        }
+        return res;
+    }
+public:
+    vector<string> letterCombinations(string digits) {
+        if (digits.empty()) return {};
+        vector<string> res;
+        string[] map = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        res.push_back("");
+        for (auto &d : digits) {
+            res = combine(res, map[d - '2']);
+        }
+        return res;
+    }
+};

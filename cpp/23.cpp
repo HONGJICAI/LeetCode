@@ -49,20 +49,19 @@ class Solution {
     }
   };
   priority_queue<ListNode *, deque<ListNode *>, compare> pq;
-
 public:
   ListNode *mergeKLists(vector<ListNode *> &lists) {
-    ListNode *p = new ListNode(0), *tail = p;
+    ListNode p(0), *tail = &p;
     for (int i = 0; i < lists.size(); ++i)
-      if (lists[i] != NULL)
+      if (lists[i] != nullptr)
         pq.push(lists[i]);
     while (!pq.empty()) {
       tail->next = pq.top();
       tail = tail->next;
       pq.pop();
-      if (tail->next != NULL)
+      if (tail->next != nullptr)
         pq.push(tail->next);
     }
-    return p->next;
+    return p.next;
   }
 };

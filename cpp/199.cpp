@@ -9,12 +9,6 @@
  * };
  */
 class Solution {
-public:
-  vector<int> rightSideView(TreeNode *root) {
-    vector<int> result;
-    preorder(result, root, 0);
-    return result;
-  }
   void preorder(vector<int> &nums, TreeNode *root, int depth) {
     if (!root)
       return;
@@ -22,5 +16,11 @@ public:
       nums.push_back(root->val);
     preorder(nums, root->right, depth + 1);
     preorder(nums, root->left, depth + 1);
+  }
+public:
+  vector<int> rightSideView(TreeNode *root) {
+    vector<int> result;
+    preorder(result, root, 0);
+    return result;
   }
 };

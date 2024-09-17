@@ -59,3 +59,38 @@ public:
     return minLen == 0x7fffffff ? "" : s.substr(start, minLen);
   }
 };
+class Solution {
+public:
+    string minWindow(string s, string t) {
+        unordered_map<char, int> tMap;
+        for (char c : t)
+            tMap[c]++;
+        int i = 0;
+        string res = s + ' ';
+        while(i < s.size() && tMap.find(s[i]) == tMap.end())
+            ++i;
+        auto moveLeftWindUtilNotMatch = [&tMap, &s](int &i, const int j) {
+            for (;i <= j; ++i) {
+                if (auto it = tMap.find(s[i]); it != tMap.end()) {
+                    if (++it->second > 0) {
+                        ++i;
+                        break;
+                    }
+                }
+            }
+        };
+        for (int j = i, matchCnt = 0; j < s.size(); ++j) {
+            if (tMap.find(s[j]) != tMap.end() && --tMap[s[j]] == 0) {
+                matchCnt++;
+                if (matchCnt == tMap.size()) {
+                    moveLeftWindUtilNotMatch(i, j);
+                    matchCnt--;                    
+                    if (j - i + 2 < res.length()) {
+                        res = s.substr(i - 1, j - i + 2);
+                    }
+                }
+            }
+        }
+        return res.size() > s.size() ? "" : res;
+    }
+};

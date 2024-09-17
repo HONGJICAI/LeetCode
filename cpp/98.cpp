@@ -14,7 +14,7 @@ class Solution {
 
 public:
   bool isValidBST(TreeNode *root) {
-    if (root == NULL)
+    if (root == nullptr)
       return 1;
     isValidBST(root->left);
     valid = root->val > last ? valid : 0;

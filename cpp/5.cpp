@@ -25,3 +25,30 @@ public:
     return s.substr(index / 2 - len / 2, len);
   }
 };
+class Solution {
+    bool recursive(const string& s, int i, int j, vector<vector<int>> &dp) {
+        if (i >= j) {
+            return dp[i][j] = 1;
+        }
+        if (dp[i][j] != -1) {
+            return 0;
+        }
+        if (s[i] == s[j]) {
+            return dp[i][j] = recursive(s, i + 1, j - 1, dp);
+        } else {
+            return dp[i][j] = 0;
+        }
+    }
+public:
+    string longestPalindrome(string s) {
+        vector<vector<int>> dp(s.size(), vector<int>(s.size(), -1));
+        for(int len = s.size(); len > 0; --len) {
+            for(int i = 0; i + len <= s.size(); ++i) {
+                if(recursive(s, i, i + len - 1, dp)){
+                    return s.substr(i, len);
+                }
+            }
+        }
+        return "";
+    }
+};

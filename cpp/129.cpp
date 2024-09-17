@@ -5,25 +5,26 @@
  *     int val;
  *     TreeNode *left;
  *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
  * };
  */
 class Solution {
-public:
-  int sumNumbers(TreeNode *root) {
-    int sum = 0;
-    calc(root, 0, sum);
-    return sum;
-  }
-  void calc(TreeNode *root, int value, int &sum) {
-    if (root == NULL)
-      return;
-    value = value * 10 + root->val;
-    if (root->left == NULL && root->right == NULL) {
-      sum += value;
-      return;
+    void calc(TreeNode* root, int value, int& sum) {
+        if (root == nullptr)
+            return;
+        value = value * 10 + root->val;
+        if (root->left == nullptr && root->right == nullptr) {
+            sum += value;
+            return;
+        }
+        calc(root->left, value, sum);
+        calc(root->right, value, sum);
     }
-    calc(root->left, value, sum);
-    calc(root->right, value, sum);
-  }
+
+  public:
+    int sumNumbers(TreeNode* root) {
+        int sum = 0;
+        calc(root, 0, sum);
+        return sum;
+    }
 };

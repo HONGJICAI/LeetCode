@@ -18,3 +18,18 @@ public:
     return 0;
   }
 };
+class SolutionStdlib {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        auto rowIt = lower_bound(matrix.begin(), matrix.end(), target, [](const vector<int>& v, int target) {
+            return v.front() < target;
+        });
+        if (rowIt != matrix.end() && rowIt->front() == target)
+            return true;
+        if (rowIt == matrix.begin())
+            return false;
+        rowIt -= 1;
+        auto colIt = lower_bound(rowIt->begin(), rowIt->end(), target);
+        return colIt != rowIt->end() && *colIt == target;
+    }
+};

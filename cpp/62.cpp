@@ -11,3 +11,18 @@ public:
     return dp[m - 1][n - 1];
   }
 };
+// math
+class Solution {
+public:
+    int uniquePaths(int m, int n) {
+        if (n > m)
+            return uniquePaths(n, m);
+        --m, --n;
+        double ret = 1.0;
+        for (int i = m + 1; i <= m + n; ++i)
+            ret *= i;
+        for (int i = 2; i <= n; ++i)
+            ret /= i;
+        return ret;
+    }
+};

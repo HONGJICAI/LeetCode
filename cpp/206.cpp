@@ -10,9 +10,9 @@
 class Solution {
 public:
   ListNode *reverseList(ListNode *head) {
-    if (head == NULL || head->next == NULL)
+    if (!head || !head->next)
       return head;
-    ListNode *pre = NULL, *now = head;
+    ListNode *pre = nullptr, *now = head;
     while (now) {
       ListNode *next = now->next;
       now->next = pre;
@@ -32,19 +32,17 @@ public:
  * };
  */
 class Solution {
-public:
-  ListNode *reverseList(ListNode *head) {
-    if (head == NULL)
-      return head;
-    if (head->next == NULL)
-      return head;
-    return recursivelyReverse(NULL, head);
-  }
-  ListNode *recursivelyReverse(ListNode *pre, ListNode *now) {
+  ListNode *impl(ListNode *pre, ListNode *now) {
     ListNode *next = now->next;
     now->next = pre;
-    if (next == NULL)
+    if (!next)
       return now;
-    return recursivelyReverse(now, next);
+    return impl(now, next);
+  }
+public:
+  ListNode *reverseList(ListNode *head) {
+    if (!head || !head->next)
+      return head;
+    return impl(nullptr, head);
   }
 };

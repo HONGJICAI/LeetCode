@@ -14,3 +14,10 @@ public:
     return l;
   }
 };
+class Solution2 {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        auto it = lower_bound(nums.begin(), nums.end(), target);
+        return it == nums.end() ? nums.size() : it - nums.begin();
+    }
+};

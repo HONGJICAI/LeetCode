@@ -13,3 +13,22 @@ public:
       }
   }
 };
+class Solution2 {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        for (int level = 0; level < matrix.size() / 2; ++ level) {
+            for (int i = 0; level + i < n - 1 - level; ++i) {
+                auto &lt = matrix[level][level + i];
+                auto &rt = matrix[level + i][n - level - 1];
+                auto &lb = matrix[n - level - 1 - i][level];
+                auto &rb = matrix[n - level - 1][n - level - 1 - i];
+                auto temp = lt;
+                lt = lb;
+                lb = rb;
+                rb = rt;
+                rt = temp;
+            }
+        }
+    }
+};

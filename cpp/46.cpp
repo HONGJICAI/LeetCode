@@ -26,3 +26,22 @@ public:
     }
   }
 };
+// construct permutation from the first i elements
+class Solution2 {
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> res = {{nums[0]}};
+        for (int i = 1; i < nums.size(); ++i) {
+            vector<vector<int>> new_res;
+            for (auto& v : res) {
+                for (int j = 0; j <= v.size(); ++j) {
+                    vector<int> new_v = v;
+                    new_v.insert(new_v.begin() + j, nums[i]);
+                    new_res.push_back(new_v);
+                }
+            }
+            res = move(new_res);
+        }
+        return res;
+    }
+};

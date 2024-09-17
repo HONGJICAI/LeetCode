@@ -29,3 +29,21 @@ public:
     return inorder;
   }
 };
+class SolutionDFS {
+    void impl(vector<int>& res, TreeNode* node) {
+        if (!node) return;
+        if (node->left) {
+            impl(res, node->left);
+        }
+        res.push_back(node->val);
+        if (node->right) {
+            impl(res, node->right);
+        }
+    }
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> res;
+        impl(res, root);
+        return res;
+    }
+};

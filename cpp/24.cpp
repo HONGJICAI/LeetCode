@@ -9,20 +9,18 @@
 class Solution { // recursion 0ms
 public:
   ListNode *swapPairs(ListNode *head) {
-    function<ListNode *(ListNode *, ListNode *, ListNode *, ListNode *)> swap =
-        [&swap](ListNode *pre, ListNode *a, ListNode *b, ListNode *cur) {
+    function<ListNode *(ListNode *, ListNode *, ListNode *)> swap =
+        [&swap](ListNode *a, ListNode *b, ListNode *cur) {
           if (a && b) {
             b->next = a;
             a->next = cur;
-            if (pre)
-              pre->next = b;
           }
           if (cur && cur->next)
-            swap(a, cur, cur->next, cur->next->next);
+            a->next = swap(cur, cur->next, cur->next->next);
           return b;
         };
     if (head && head->next)
-      return swap(nullptr, head, head->next, head->next->next);
+      return swap(head, head->next, head->next->next);
     return head;
   }
 };

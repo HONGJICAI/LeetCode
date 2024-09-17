@@ -1,38 +1,36 @@
-// inorder.cpp
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
  *     TreeNode *left;
  *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),
+ * right(right) {}
  * };
  */
 class Solution {
-  TreeNode *m1, *m2, *pre = NULL;
-  bool firstOne = 1;
+    TreeNode *m1 = nullptr, *m2 = nullptr, *pre = nullptr;
+    void inorder(TreeNode* root) {
+        if (root == nullptr)
+            return;
+        inorder(root->left);
+        if (pre) {
+            if (!m1 && root->val < pre->val) {
+                m1 = pre;
+            }
+            if (m1 && root->val < pre->val) {
+                m2 = root;
+            }
+        }
+        pre = root;
+        inorder(root->right);
+    }
 
 public:
-  void recoverTree(TreeNode *root) {
-    inorder(root);
-    int temp = m1->val;
-    m1->val = m2->val;
-    m2->val = temp;
-  }
-  void inorder(TreeNode *root) {
-    if (root == NULL)
-      return;
-    inorder(root->left);
-    if (pre) {
-      if (firstOne && root->val < pre->val) {
-        m1 = pre;
-        firstOne = 0;
-      }
-      if (!firstOne && root->val < pre->val) {
-        m2 = root;
-      }
+    void recoverTree(TreeNode* root) {
+        inorder(root);
+        swap(m1->val, m2->val);
     }
-    pre = root;
-    inorder(root->right);
-  }
 };

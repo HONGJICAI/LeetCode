@@ -18,3 +18,25 @@ public:
     return res;
   }
 };
+// encode
+class Solution2 {
+    string encode(const string& s) {
+        string res(26, 0);
+        for (char c : s) {
+            ++res[c - 'a'];
+        }
+        return res;
+    }
+public:
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        unordered_map<string, vector<string>> mp;
+        for (auto& s : strs) {
+            mp[encode(s)].push_back(s);
+        }
+        vector<vector<string>> res;
+        for (auto [k,v]:mp) {
+            res.push_back(move(v));
+        }
+        return res;
+    }
+};

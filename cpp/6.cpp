@@ -1,21 +1,16 @@
 // simple.cpp
 class Solution {
 public:
-  string convert(string s, int numRows) {
-    if (numRows <= 1)
-      return s;
-    string res;
-    string *arr = new string[numRows];
-    for (int i = 0, j = 0, sign = 1; i < s.size(); ++i) {
-      arr[j] += s[i];
-      if (j == numRows - 1)
-        sign = -1;
-      else if (j == 0)
-        sign = 1;
-      j += sign;
+    string convert(string s, int numRows) {
+        if (numRows <= 1)
+            return s;
+        auto strings = vector<string>(numRows);
+        for(int i = 0, j = 0, direct = 1; j < s.size();) {
+            strings[i] += s[j++];
+            if(i == 0) direct = 1;
+            if(i == numRows - 1) direct = -1;
+            i += direct;
+        }
+        return accumulate(strings.begin(), strings.end(), string());
     }
-    for (int i = 0; i < numRows; ++i)
-      res += arr[i];
-    return res;
-  }
 };

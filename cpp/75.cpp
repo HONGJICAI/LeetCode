@@ -16,3 +16,22 @@ public:
     }
   }
 };
+class Solution2 {
+public:
+    void sortColors(vector<int>& nums) {
+        for (int i = 0, l = 0, r = nums.size() - 1; i <= r;) {
+            switch(nums[i]) {
+                case 0:
+                    swap(nums[i], nums[l++]);
+                    i++;
+                    break;
+                case 1:
+                    i++;
+                    break;
+                case 2:
+                    swap(nums[i], nums[r--]);
+                    break;
+            }
+        }
+    }
+};
