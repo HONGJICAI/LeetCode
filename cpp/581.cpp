@@ -19,7 +19,7 @@ public:
   }
 };
 // sort.cpp
-class Solution {
+class Solution2 {
 public:
   int findUnsortedSubarray(vector<int> &nums) {
     vector<int> res(nums.begin(), nums.end());
@@ -33,7 +33,7 @@ public:
   }
 };
 // stack.cpp
-class Solution {
+class Solution3 {
 public:
   int findUnsortedSubarray(vector<int> &nums) {
     stack<int> st1, st2;

@@ -28,7 +28,7 @@ public:
   }
 };
 // uglycode.cpp
-class Solution {
+class Solution2 {
 public:
   bool checkInclusion(string s1, string s2) {
     int s1s[26] = {};

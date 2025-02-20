@@ -16,7 +16,7 @@ public:
   }
 };
 // smart.cpp
-class Solution {
+class Solution2 {
 public:
   int minSteps(int n) {
     if (n == 1)

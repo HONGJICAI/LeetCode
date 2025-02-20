@@ -24,7 +24,7 @@ public:
   }
 };
 // single-scan.cpp
-class Solution {
+class Solution2 {
 public:
   int singleNonDuplicate(vector<int> &nums) {
     for (int i = 0; i < nums.size(); i += 2)

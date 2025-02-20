@@ -18,7 +18,7 @@ public:
   }
 };
 // singleScan.cpp
-class Solution {
+class Solution2 {
 public:
   int countBinarySubstrings(string s) {
     int pre = 0, cur = 1, res = 0;

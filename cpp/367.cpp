@@ -13,7 +13,7 @@ public:
   }
 };
 // 2-0ms.cpp
-class Solution {
+class Solution2 {
 public:
   bool isPerfectSquare(int num) {
     int i = 1, j = num;

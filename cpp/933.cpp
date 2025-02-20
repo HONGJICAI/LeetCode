@@ -28,24 +28,3 @@ public:
  * RecentCounter* obj = new RecentCounter();
  * int param_1 = obj->ping(t);
  */
-
-class RecentCounter { // 204ms with stl
-  vector<int> buf;
-  int lastCallIdx = 0;
-
-public:
-  RecentCounter() {}
-
-  int ping(int t) {
-    buf.push_back(t);
-    lastCallIdx = lower_bound(buf.begin() + lastCallIdx, buf.end(), t - 3000) -
-                  buf.begin();
-    return buf.size() - lastCallIdx;
-  }
-};
-
-/**
- * Your RecentCounter object will be instantiated and called as such:
- * RecentCounter* obj = new RecentCounter();
- * int param_1 = obj->ping(t);
- */

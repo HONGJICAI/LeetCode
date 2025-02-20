@@ -19,7 +19,7 @@ public:
     return j == p.size() || p.find_first_not_of("*", j) == string::npos;
   }
 };
-class Solution {
+class Solution2 {
   // Runtime: 32 ms, faster than 69.51% of C++ online submissions for Wildcard
   // Matching. Memory Usage: 30.2 MB, less than 9.17% of C++ online submissions
   // for Wildcard Matching.

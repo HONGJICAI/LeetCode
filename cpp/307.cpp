@@ -38,7 +38,7 @@ public:
  * int param_2 = obj->sumRange(i,j);
  */
 
-class NumArray {
+class NumArray2 {
   // Runtime: 184 ms, faster than 13.56% of C++ online submissions for Range Sum
   // Query - Mutable. Memory Usage: 20 MB, less than 23.38% of C++ online
   // submissions for Range Sum Query - Mutable.
@@ -62,7 +62,7 @@ class NumArray {
   }
 
 public:
-  NumArray(vector<int> &nums) : m_nums(nums) {
+  NumArray2(vector<int> &nums) : m_nums(nums) {
     int len = nums.size();
     if (len == 0)
       return;

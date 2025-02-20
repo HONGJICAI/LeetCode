@@ -15,7 +15,7 @@ public:
   }
 };
 // usingMath.cpp
-class Solution {
+class Solution2 {
 public:
   vector<int> grayCode(int n) {
     if (n == 0)

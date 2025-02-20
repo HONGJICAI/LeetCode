@@ -16,7 +16,7 @@ public:
   }
 };
 // stupid-9ms.cpp
-class Solution {
+class Solution2 {
 public:
   string licenseKeyFormatting(string S, int K) {
     int dashNumber = 0;

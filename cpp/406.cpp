@@ -13,7 +13,7 @@ public:
     return res;
   }
 };
-class Solution { // better than first one because of the use of list
+class Solution2 { // better than first one because of the use of list
   // Runtime: 40 ms, faster than 94.96% of C++ online submissions for Queue
   // Reconstruction by Height.
 public:

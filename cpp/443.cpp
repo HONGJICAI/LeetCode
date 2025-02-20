@@ -18,7 +18,7 @@ public:
   }
 };
 // singleScan.cpp
-class Solution {
+class Solution2 {
 public:
   int compress(vector<char> &chars) {
     int res = 0;

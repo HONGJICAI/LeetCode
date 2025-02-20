@@ -15,7 +15,7 @@ public:
   }
 };
 // singleScanConstantSpace-8ms.cpp
-class Solution {
+class Solution2 {
 public:
   int maxProduct(vector<int> &nums) {
     auto maxPro = nums[0], minPro = nums[0], ret = nums[0];

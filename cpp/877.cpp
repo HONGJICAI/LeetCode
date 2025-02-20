@@ -24,7 +24,7 @@ public:
   bool stoneGame(vector<int> &piles) { return true; }
 };
 
-class Solution { // dp
+class Solution2 { // dp
 public:
   bool stoneGame(vector<int> &piles) {
     vector<vector<int>> dp(piles.size(), vector<int>(piles.size(), 0));

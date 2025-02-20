@@ -31,7 +31,7 @@ public:
     return 0;
   }
 };
-class Solution {
+class Solution2 {
   // Time Limit Exceeded
   // Last executed input 100000000
 public:
@@ -69,7 +69,7 @@ public:
     return 0;
   }
 };
-class Solution {
+class Solution3 {
   // Runtime: 4 ms, faster than 88.22% of C++ online submissions for Integer
   // Replacement. Memory Usage: 13 MB, less than 5.34% of C++ online submissions
   // for Integer Replacement.

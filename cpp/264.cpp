@@ -17,7 +17,7 @@ public:
   }
 };
 // set.cpp
-class Solution {
+class Solution2 {
 public:
   int nthUglyNumber(int n) {
     set<long long int> s;

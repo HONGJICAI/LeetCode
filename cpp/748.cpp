@@ -21,7 +21,7 @@ public:
     return res;
   }
 };
-class Solution { // Runtime: 16 ms
+class Solution2 { // Runtime: 16 ms
 public:
   string shortestCompletingWord(string licensePlate, vector<string> &words) {
     vector<int> cntlic(26, 0);

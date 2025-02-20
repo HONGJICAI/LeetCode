@@ -22,7 +22,7 @@ public:
     return *max_element(begin(res), end(res));
   }
 };
-class Solution {
+class Solution2 {
   // Runtime: 80 ms, faster than 76.32% of C++ online submissions for Heaters.
   // Memory Usage: 11.7 MB, less than 9.44% of C++ online submissions for
   // Heaters.

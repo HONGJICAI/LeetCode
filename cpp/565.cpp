@@ -19,7 +19,7 @@ public:
   }
 };
 // hashset.cpp
-class Solution {
+class Solution2 {
 public:
   int arrayNesting(vector<int> &nums) {
     unordered_set<int> hashset;

@@ -17,7 +17,7 @@ public:
   }
 };
 // lower-efficient.cpp
-class Solution {
+class Solution2 {
 public:
   int maxProduct(vector<string> &words) {
     int len = 0;

@@ -1,5 +1,3 @@
-/*
-// Definition for a Node.
 class Node {
 public:
     int val;
@@ -8,11 +6,10 @@ public:
 
     Node(int _val) {
         val = _val;
-        next = NULL;
-        random = NULL;
+        next = nullptr;
+        random = nullptr;
     }
 };
-*/
 // noExtraSpace.cpp
 class Solution {
   public:
@@ -36,7 +33,7 @@ class Solution {
     }
 };
 // scanTWice-60ms.cpp
-class Solution {
+class Solution2 {
   public:
     RandomListNode* copyRandomList(RandomListNode* head) {
         unordered_map<RandomListNode*, int> hash;

@@ -23,7 +23,7 @@ public:
   }
 };
 // TLE.cpp
-class Solution {
+class Solution2 {
 public:
   int numberOfBoomerangs(vector<pair<int, int>> &points) {
     int n = points.size(), count = 0;

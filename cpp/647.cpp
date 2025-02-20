@@ -17,7 +17,7 @@ public:
   }
 };
 // dp-22ms.cpp
-class Solution {
+class Solution2 {
 public:
   int countSubstrings(string s) {
     int n = s.size(), res = n;

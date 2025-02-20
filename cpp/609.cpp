@@ -38,7 +38,7 @@ public:
   }
 };
 // hash+sort+96ms.cpp
-class Solution {
+class Solution2 {
 public:
   vector<vector<string>> findDuplicate(vector<string> &paths) {
     unordered_map<string, int> hashmap;

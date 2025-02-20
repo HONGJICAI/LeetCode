@@ -19,7 +19,7 @@ class Solution {
     }
 };
 // trie+dp.cpp 3ms
-class Solution {
+class Solution2 {
     struct trie {
         trie() : isWord(false) {}
         bool isWord;

@@ -28,7 +28,7 @@ public:
     }
 };
 // timeO81_spaceO243.cpp
-class Solution {
+class Solution2 {
 public:
     bool isValidSudoku(vector<vector<char>>& board) {
         int ver[9][9] = {}, hor[9][9] = {}, chunk[9][9] = {};

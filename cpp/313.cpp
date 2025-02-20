@@ -26,7 +26,7 @@ public:
   }
 };
 // priority_queue.cpp
-class Solution {
+class Solution2 {
 public:
   int nthSuperUglyNumber(int n, vector<int> &primes) {
     priority_queue<long long int, vector<long long int>, greater<int>> pq;
@@ -47,7 +47,7 @@ public:
   }
 };
 // usingVector.cpp
-class Solution {
+class Solution3 {
 public:
   int nthSuperUglyNumber(int n, vector<int> &primes) {
     vector<int> index(primes.size(), 0), cache(primes), res(n, 1);

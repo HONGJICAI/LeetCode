@@ -38,7 +38,7 @@ public:
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution {
+class Solution2 {
 public:
   int countNodes(TreeNode *root) {
     int Deep = 0, result = 0;

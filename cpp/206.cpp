@@ -31,7 +31,7 @@ public:
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class Solution {
+class Solution2 {
   ListNode *impl(ListNode *pre, ListNode *now) {
     ListNode *next = now->next;
     now->next = pre;

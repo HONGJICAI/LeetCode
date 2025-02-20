@@ -15,7 +15,7 @@ public:
   }
 };
 // dfs+stringstream.cpp
-class Solution {
+class Solution2 {
   bool dfs(vector<string> &arr, int &i) {
     if (i >= arr.size())
       return false;

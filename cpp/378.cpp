@@ -31,7 +31,7 @@ public:
   }
 };
 // sort.cpp
-class Solution {
+class Solution2 {
 public:
   int kthSmallest(vector<vector<int>> &matrix, int k) {
     multiset<int> res;
@@ -43,7 +43,7 @@ public:
     return *it;
   }
 };
-class Solution2 {
+class Solution3 {
 public:
   int kthSmallest(vector<vector<int>> &matrix, int k) {
     vector<int> res;

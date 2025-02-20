@@ -27,7 +27,7 @@ public:
     return canPartition(0, k, 0);
   }
 };
-class Solution {
+class Solution2 {
   // Runtime: 0 ms
   // Memory Usage: 8.2 MB
 public:

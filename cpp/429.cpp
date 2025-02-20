@@ -1,5 +1,3 @@
-/*
-// Definition for a Node.
 class Node {
 public:
     int val;
@@ -12,7 +10,6 @@ public:
         children = _children;
     }
 };
-*/
 class Solution { // 136ms 99.81%
 public:
   vector<vector<int>> levelOrder(Node *root) {

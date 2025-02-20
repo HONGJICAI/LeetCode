@@ -12,7 +12,7 @@ public:
     return ret;
   }
 };
-class Solution {
+class Solution2 {
   // Runtime: 152 ms, faster than 94.79% of C++ online submissions for
   // Palindrome Pairs. Memory Usage: 28.2 MB, less than 94.95% of C++ online
   // submissions for Palindrome Pairs.

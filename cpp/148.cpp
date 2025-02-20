@@ -49,7 +49,7 @@ public:
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class Solution {
+class Solution2 {
   pair<ListNode *, ListNode *> helper(ListNode *head) {
     if (!head)
       return {nullptr, nullptr};

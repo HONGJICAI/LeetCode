@@ -30,7 +30,7 @@ class Solution {
     }
 };
 // dfs.cpp
-class Solution {
+class Solution2 {
     void dfs(int index, string& s, vector<string>& path,
              vector<vector<string>>& ret) {
         if (index == s.size()) {

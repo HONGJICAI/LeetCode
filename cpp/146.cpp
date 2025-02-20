@@ -41,7 +41,7 @@ public:
  * obj.put(key,value);
  */
 // map_hashmap_103ms.cpp
-class LRUCache {
+class LRUCache2 {
   unsigned int capacity;
   map<int, int> timemap; // key time,value cache's key
   unordered_map<int, pair<int, int>>
@@ -49,7 +49,7 @@ class LRUCache {
   unsigned int call;
 
 public:
-  LRUCache(int capacity) {
+  LRUCache2(int capacity) {
     this->capacity = capacity;
     call = 0;
   }

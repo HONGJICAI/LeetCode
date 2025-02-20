@@ -26,7 +26,7 @@ public:
   }
 };
 // sort.cpp
-class Solution {
+class Solution2 {
 public:
   int maximumProduct(vector<int> &nums) {
     sort(nums.begin(), nums.end());

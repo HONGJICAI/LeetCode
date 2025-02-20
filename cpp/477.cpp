@@ -13,7 +13,7 @@ public:
   }
 };
 // more-better.cpp
-class Solution {
+class Solution2 {
 public:
   int totalHammingDistance(vector<int> &nums) {
     vector<int> stack(32);
@@ -31,7 +31,7 @@ public:
   }
 };
 // TLE.cpp
-class Solution {
+class Solution3 {
 public:
   int totalHammingDistance(vector<int> &nums) {
     int res = 0;

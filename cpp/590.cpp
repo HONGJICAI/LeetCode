@@ -1,6 +1,4 @@
 // recursion.cpp
-/*
-// Definition for a Node.
 class Node {
 public:
     int val;
@@ -13,7 +11,6 @@ public:
         children = _children;
     }
 };
-*/
 class Solution {
   void postOrderVisit(vector<int> &res, Node *root) {
     if (!root)

@@ -21,7 +21,7 @@ public:
   }
 };
 // usingTrie.cpp
-class Solution {
+class Solution2 {
   struct trie {
     trie() : isWord(false) {
       for (int i = 0; i < 26; ++i)

@@ -39,7 +39,7 @@ public:
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-class Solution {
+class Solution2 {
 public:
   bool isSubtree(TreeNode *s, TreeNode *t) {
     string ss, tt;

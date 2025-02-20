@@ -28,7 +28,7 @@ public:
     return ret;
   }
 };
-class Solution {
+class Solution2 {
   // Runtime: 8 ms, faster than 94.04% of C++ online submissions for Delete and
   // Earn. Memory Usage: 11.2 MB, less than 31.37% of C++ online submissions for
   // Delete and Earn.

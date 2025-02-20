@@ -44,7 +44,7 @@ public:
   }
 };
 // trie+49ms.cpp
-class Solution {
+class Solution2 {
   struct trie {
     trie *children[26] = {};
   } root;

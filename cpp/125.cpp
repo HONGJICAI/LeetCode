@@ -28,7 +28,7 @@ class Solution {
         return 0;
     }
 };
-class Solution {
+class Solution2 {
   public:
     bool isPalindrome(string s) {
         string filtered;

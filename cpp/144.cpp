@@ -9,7 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution2 {
   public:
     vector<int> preorderTraversal(TreeNode* root) {
         auto h = TreeNode(0, nullptr, root);

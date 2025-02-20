@@ -2,6 +2,7 @@ import glob
 import os
 
 cpps = glob.glob("cpp/*.cpp")
+errors = []
 for cpp in cpps:
     print(cpp)
     code = '''
@@ -11,12 +12,15 @@ struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 struct RandomListNode {
     int label;
@@ -44,23 +48,17 @@ public:
     // the id of direct subordinates
     vector<int> subordinates;
 };
-class Node {
-public:
-    int val;
-    vector<Node*> children;
-
-    Node() {}
-
-    Node(int _val, vector<Node*> _children) {
-        val = _val;
-        children = _children;
-    }
-};
 '''
     with open(cpp) as f:
         code += f.read()
     with open("a.cpp", "w") as f:
         f.writelines(code)
-    cmd = "g++ a.cpp -o a.so -shared -fpic -std=c++17"
+    cmd = "g++ a.cpp -o a.so -shared -fpic -std=c++20"
     if 0 != os.system(cmd):
-        exit(-1)
+        errors.append(cpp)
+if len(errors) > 0:
+    print("Errors in the following files:")
+    for error in errors:
+        print(error)
+    exit(1)
+print("All files compiled successfully.")

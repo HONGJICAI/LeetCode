@@ -19,7 +19,7 @@ public:
     return false;
   }
 };
-class Solution {
+class Solution2 {
   // Runtime: 292 ms, faster than 34.78% of C++ online submissions for 132
   // Pattern. Memory Usage: 10.6 MB, less than 33.33% of C++ online submissions
   // for 132 Pattern.
@@ -41,7 +41,7 @@ public:
     return false;
   }
 };
-class Solution {
+class Solution3 {
   // Runtime: 24 ms, faster than 88.49% of C++ online submissions for 132
   // Pattern. Memory Usage: 10.3 MB, less than 60.77% of C++ online submissions
   // for 132 Pattern.

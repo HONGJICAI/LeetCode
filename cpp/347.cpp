@@ -20,7 +20,7 @@ public:
   }
 };
 // hashmap+heap+19ms.cpp
-class Solution {
+class Solution2 {
 public:
   vector<int> topKFrequent(vector<int> &nums, int k) {
     unordered_map<int, int> hashmap;
@@ -46,7 +46,7 @@ public:
   }
 };
 // hashmap+multimap+22ms.cpp
-class Solution {
+class Solution3 {
 public:
   vector<int> topKFrequent(vector<int> &nums, int k) {
     unordered_map<int, int> hashmap;

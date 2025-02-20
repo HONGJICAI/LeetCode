@@ -25,7 +25,7 @@ vector<string> Solution::letter = {"",    "",    "abc",  "def", "ghi",
                                    "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
 string keymap[] = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-class Solution {
+class Solution2 {
     vector<string> combine(vector<string>& a, string& b) {
         vector<string> res;
         for (auto& i : a) {

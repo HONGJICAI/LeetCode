@@ -14,7 +14,7 @@ public:
   }
 };
 // 2-29ms.cpp
-class Solution {
+class Solution2 {
 public:
   bool canPartition(vector<int> &nums) {
     int sum = 0, n = nums.size();

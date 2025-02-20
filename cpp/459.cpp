@@ -25,7 +25,7 @@ public:
   }
 };
 // simple35ms.cpp
-class Solution {
+class Solution2 {
 public:
   bool repeatedSubstringPattern(string s) {
     int n = s.size();

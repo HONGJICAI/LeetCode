@@ -1,5 +1,3 @@
-/*
-// Definition for a Node.
 class Node {
 public:
     int val;
@@ -12,7 +10,6 @@ public:
         children = _children;
     }
 };
-*/
 class Solution { // Runtime: 136 ms, faster than 98.03% of C++ online
                  // submissions for Maximum Depth of N-ary Tree.
 public:

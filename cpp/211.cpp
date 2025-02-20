@@ -39,7 +39,7 @@ public:
  * bool param_2 = obj.search(word);
  */
 // trie.cpp
-class WordDictionary {
+class WordDictionary2 {
   struct trie {
     trie() : isWord(false) { memset(this->children, 0, sizeof(children)); }
     bool isWord;
@@ -48,7 +48,7 @@ class WordDictionary {
 
 public:
   /** Initialize your data structure here. */
-  WordDictionary() {}
+  WordDictionary2() {}
 
   /** Adds a word into the data structure. */
   void addWord(string word) {
