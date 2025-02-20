@@ -16,9 +16,11 @@ class Solution {
             from_chars(temp.data(), temp.data() + temp.size(), val);
             if (val > 255)
                 break;
-            dfs(s + string(temp), t.substr(i), part + 1); // string + string_view require c++26
+            dfs(s + string(temp), t.substr(i),
+                part + 1); // string + string_view require c++26
         }
     }
+
 public:
     vector<string> restoreIpAddresses(string s) {
         dfs("", s, 0);

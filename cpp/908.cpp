@@ -6,7 +6,7 @@ public:
                0);
   }
 };
-class Solution { // 24ms
+class Solution2 { // 24ms
 public:
   int smallestRangeI(vector<int> &A, int K) {
     auto [minIt, maxIt] = minmax_element(A.begin(), A.end());

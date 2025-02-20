@@ -15,7 +15,7 @@ public:
   }
 };
 // inverseDP.cpp
-class Solution {
+class Solution2 {
 public:
   int numDecodings(string s) {
     int n = s.size();

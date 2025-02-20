@@ -9,7 +9,7 @@
  */
 class Solution {
 public:
-    ListNode *partition(ListNode *head, int x) {
+    ListNode* partition(ListNode* head, int x) {
         if (head == nullptr || head->next == nullptr)
             return head;
         auto small = ListNode(0), big = ListNode(0);

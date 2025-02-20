@@ -31,7 +31,7 @@ public:
   }
 };
 // simple.cpp
-class Solution {
+class Solution2 {
   bool allContain(vector<int> &arr) {
     for (auto num : arr)
       if (num > 0)
@@ -59,7 +59,7 @@ public:
     return minLen == 0x7fffffff ? "" : s.substr(start, minLen);
   }
 };
-class Solution {
+class Solution3 {
 public:
     string minWindow(string s, string t) {
         unordered_map<char, int> tMap;

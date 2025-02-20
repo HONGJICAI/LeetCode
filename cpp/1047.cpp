@@ -12,7 +12,7 @@ public:
     return i == -1 ? S : removeDuplicates(S.substr(0, i) + S.substr(j));
   }
 };
-class Solution { // 24ms iteration
+class Solution2 { // 24ms iteration
 public:
   string removeDuplicates(string S) {
     stack<int> st;

@@ -1,52 +1,26 @@
-// iteration.cpp
 /**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
  *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
 class Solution {
 public:
-  ListNode *deleteDuplicates(ListNode *head) {
-    ListNode *p1 = new ListNode(0), *p2;
-    p1->next = head;
-    p2 = p1;
-    if (p1->next == NULL || p1->next->next == NULL)
-      return p1->next;
-    while (p1->next && p1->next->next)
-      if (p1->next->val != p1->next->next->val)
-        p1 = p1->next;
-      else
-        p1->next = deleteVal(p1->next, p1->next->val);
-    return p2->next;
-  }
-  ListNode *deleteVal(ListNode *head, int val) {
-    while (head != NULL && head->val == val)
-      if (head->next != NULL)
-        *head = *(head->next);
-      else
-        return NULL;
-    return head;
-  }
-};
-
-class Solution2 {
-public:
     ListNode* deleteDuplicates(ListNode* head) {
         ListNode h(0, head);
-        auto p = &h;
-        while(p->next) {
-            if(auto temp = p->next->next; temp != nullptr) {
-                if (p->next->val == temp->val) {
-                    while (temp && p->next->val == temp->val)
-                        temp = temp->next;
-                    p->next = temp;
-                    continue;
-                }
+        for (auto p = &h; p->next;) {
+            if (auto temp = p->next->next;
+                temp != nullptr && p->next->val == temp->val) {
+                while (temp && p->next->val == temp->val)
+                    temp = temp->next;
+                p->next = temp;
+            } else {
+                p = p->next;
             }
-            p = p->next;
         }
         return h.next;
     }
