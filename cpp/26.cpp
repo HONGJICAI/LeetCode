@@ -11,9 +11,9 @@ public:
         return i + 1;
     }
 };
-class Solution2 { // using stl, 24ms
+class SolutionCpp20 {
 public:
     int removeDuplicates(vector<int>& nums) {
-        return unique(nums.begin(), nums.end()) - nums.begin();
+        return nums.size() - ranges::unique(nums).size();
     }
 };

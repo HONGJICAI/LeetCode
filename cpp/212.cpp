@@ -1,46 +1,67 @@
-// dfs-TLE.cpp
 class Solution {
-  int row, col;
-  bool search(string &word, int index, vector<vector<char>> &board, int i,
-              int j, vector<vector<int>> &visited) {
-    if (i < 0 || i >= row || j < 0 || j >= col || visited[i][j] ||
-        word[index] != board[i][j])
-      return false;
-    visited[i][j] = true;
-    if (index == word.size() - 1) {
-      visited[i][j] = false;
-      return true;
-    }
-    if (search(word, index + 1, board, i + 1, j, visited) ||
-        search(word, index + 1, board, i - 1, j, visited) ||
-        search(word, index + 1, board, i, j + 1, visited) ||
-        search(word, index + 1, board, i, j - 1, visited)) {
-      visited[i][j] = false;
-      return true;
-    }
-    visited[i][j] = false;
-    return false;
-  }
-
-public:
-  vector<string> findWords(vector<vector<char>> &board, vector<string> &words) {
-    unordered_map<char, vector<pair<int, int>>> position;
-    row = board.size();
-    vector<string> res;
-    unordered_set<string> _words(words.begin(), words.end());
-    if (row == 0)
-      return res;
-    col = board[0].size();
-    for (int i = 0; i < row; ++i)
-      for (int j = 0; j < col; ++j)
-        position[board[i][j]].push_back(pair<int, int>(i, j));
-    vector<vector<int>> visited(row, vector<int>(col, 0));
-    for (auto word : _words)
-      for (auto p : position[word[0]])
-        if (search(word, 0, board, p.first, p.second, visited)) {
-          res.emplace_back(word);
-          break;
+    struct Trie {
+        int idx;
+        Trie* parent = nullptr;
+        Trie* children[26] = {};
+        bool word = false;
+        int childrenCnt = 0;
+        Trie(int idx, Trie* parent): idx(idx), parent(parent) {}
+        Trie() {}
+    } root;
+    void insert(auto& word) {
+        auto p = &root;
+        for (auto ch: word) {
+            if (!p->children[ch-'a']) {
+                p->children[ch-'a'] = new Trie(ch - 'a', p);
+                ++p->childrenCnt;
+            }
+            p = p->children[ch-'a'];
         }
-    return res;
-  }
+        p->word = true;
+    }
+    void tryErase(Trie* p) {
+        p->word = false;
+        while (p && !p->word && p->childrenCnt == 0 && p->parent) {
+            auto top = p->parent;
+            top->children[p->idx] = nullptr;
+            --top->childrenCnt;
+            delete top->children[p->idx];
+            p = top;
+        }
+    }
+public:
+    vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
+        for (auto& word: words)
+            insert(word);
+        vector<string> ret;
+        string cur;
+        function<void(int, int, Trie*)> dfs = [&](int i, int j, Trie* node) {
+            auto ch = board[i][j];
+            if (ch == '.') return;
+            node = node->children[ch - 'a'];
+            if (!node) return;
+            cur += ch;
+            if (node->word) {
+                ret.push_back(cur);
+                tryErase(node);
+            }
+            board[i][j] = '.';
+            if (i > 0)
+                dfs(i-1, j, node);
+            if (j > 0)
+                dfs(i, j-1, node);
+            if (i + 1 < board.size())
+                dfs(i + 1, j, node);
+            if (j + 1< board[0].size())
+                dfs(i, j + 1, node);
+            cur.pop_back();
+            board[i][j] = ch;
+        };
+        for (int m = 0; m < board.size(); ++m) {
+            for (int n = 0; n < board[0].size(); ++n) {
+                dfs(m, n, &root);
+            }
+        }
+        return ret;
+    }
 };

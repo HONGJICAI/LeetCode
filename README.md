@@ -18,7 +18,7 @@ my solution for LeetCode
 | 7 | Reverse Integer | [cpp](cpp/7.cpp) | medium |
 | 8 | String to Integer (atoi) | [cpp](cpp/8.cpp) | medium |
 | 9 | Palindrome Number | [cpp](cpp/9.cpp) | easy |
-| 10 | Regular Expression Matching |  | hard |
+| 10 | Regular Expression Matching | [cpp](cpp/10.cpp) | hard |
 | 11 | Container With Most Water | [cpp](cpp/11.cpp) | medium |
 | 12 | Integer to Roman | [cpp](cpp/12.cpp) | medium |
 | 13 | Roman to Integer | [cpp](cpp/13.cpp) | easy |
@@ -93,7 +93,7 @@ my solution for LeetCode
 | 82 | Remove Duplicates from Sorted List II | [cpp](cpp/82.cpp) | medium |
 | 83 | Remove Duplicates from Sorted List | [cpp](cpp/83.cpp) | easy |
 | 84 | Largest Rectangle in Histogram | [cpp](cpp/84.cpp) | hard |
-| 85 | Maximal Rectangle |  | hard |
+| 85 | Maximal Rectangle | [cpp](cpp/85.cpp) | hard |
 | 86 | Partition List | [cpp](cpp/86.cpp) | medium |
 | 87 | Scramble String |  | hard |
 | 88 | Merge Sorted Array | [cpp](cpp/88.cpp) | easy |
@@ -134,7 +134,7 @@ my solution for LeetCode
 | 123 | Best Time to Buy and Sell Stock III |  | hard |
 | 124 | Binary Tree Maximum Path Sum | [cpp](cpp/124.cpp) | hard |
 | 125 | Valid Palindrome | [cpp](cpp/125.cpp) | easy |
-| 126 | Word Ladder II |  | hard |
+| 126 | Word Ladder II | [cpp](cpp/126.cpp) | hard |
 | 127 | Word Ladder | [cpp](cpp/127.cpp) | hard |
 | 128 | Longest Consecutive Sequence | [cpp](cpp/128.cpp) | medium |
 | 129 | Sum Root to Leaf Numbers | [cpp](cpp/129.cpp) | medium |
@@ -143,7 +143,7 @@ my solution for LeetCode
 | 132 | Palindrome Partitioning II | [cpp](cpp/132.cpp) | hard |
 | 133 | Clone Graph | [cpp](cpp/133.cpp) | medium |
 | 134 | Gas Station | [cpp](cpp/134.cpp) | medium |
-| 135 | Candy |  | hard |
+| 135 | Candy | [cpp](cpp/135.cpp) | hard |
 | 136 | Single Number | [cpp](cpp/136.cpp) | easy |
 | 137 | Single Number II | [cpp](cpp/137.cpp) | medium |
 | 138 | Copy List with Random Pointer | [cpp](cpp/138.cpp) | medium |
@@ -182,11 +182,11 @@ my solution for LeetCode
 | 171 | Excel Sheet Column Number | [cpp](cpp/171.cpp) | easy |
 | 172 | Factorial Trailing Zeroes | [cpp](cpp/172.cpp) | medium |
 | 173 | Binary Search Tree Iterator | [cpp](cpp/173.cpp) | medium |
-| 174 | Dungeon Game |  | hard |
+| 174 | Dungeon Game | [cpp](cpp/174.cpp) | hard |
 | 175 | Combine Two Tables | [sql](sql/175.sql) | easy |
 | 176 | Second Highest Salary | [sql](sql/176.sql) | medium |
 | 177 | Nth Highest Salary | [sql](sql/177.sql) | medium |
-| 178 | Rank Scores |  | medium |
+| 178 | Rank Scores | [sql](sql/178.sql) | medium |
 | 179 | Largest Number | [cpp](cpp/179.cpp) | medium |
 | 180 | Consecutive Numbers |  | medium |
 | 181 | Employees Earning More Than Their Managers | [sql](sql/181.sql) | easy |
@@ -232,7 +232,7 @@ my solution for LeetCode
 | 221 | Maximal Square | [cpp](cpp/221.cpp) | medium |
 | 222 | Count Complete Tree Nodes | [cpp](cpp/222.cpp) | easy |
 | 223 | Rectangle Area | [cpp](cpp/223.cpp) | medium |
-| 224 | Basic Calculator |  | hard |
+| 224 | Basic Calculator | [cpp](cpp/224.cpp) | hard |
 | 225 | Implement Stack using Queues | [cpp](cpp/225.cpp) | easy |
 | 226 | Invert Binary Tree | [cpp](cpp/226.cpp) | easy |
 | 227 | Basic Calculator II |  | medium |
@@ -241,7 +241,7 @@ my solution for LeetCode
 | 230 | Kth Smallest Element in a BST | [cpp](cpp/230.cpp) | medium |
 | 231 | Power of Two | [cpp](cpp/231.cpp) | easy |
 | 232 | Implement Queue using Stacks | [cpp](cpp/232.cpp) | easy |
-| 233 | Number of Digit One |  | hard |
+| 233 | Number of Digit One | [cpp](cpp/233.cpp) | hard |
 | 234 | Palindrome Linked List | [cpp](cpp/234.cpp) | easy |
 | 235 | Lowest Common Ancestor of a Binary Search Tree | [cpp](cpp/235.cpp) | medium |
 | 236 | Lowest Common Ancestor of a Binary Tree | [cpp](cpp/236.cpp) | medium |
@@ -290,7 +290,7 @@ my solution for LeetCode
 | 279 | Perfect Squares | [cpp](cpp/279.cpp) | medium |
 | 280 | Wiggle Sort |  | medium |
 | 281 | Zigzag Iterator |  | medium |
-| 282 | Expression Add Operators |  | hard |
+| 282 | Expression Add Operators | [cpp](cpp/282.cpp) | hard |
 | 283 | Move Zeroes | [cpp](cpp/283.cpp) | easy |
 | 284 | Peeking Iterator | [cpp](cpp/284.cpp) | medium |
 | 285 | Inorder Successor in BST |  | medium |
@@ -318,18 +318,18 @@ my solution for LeetCode
 | 307 | Range Sum Query - Mutable | [cpp](cpp/307.cpp) | medium |
 | 308 | Range Sum Query 2D - Mutable |  | medium |
 | 309 | Best Time to Buy and Sell Stock with Cooldown |  | medium |
-| 310 | Minimum Height Trees |  | medium |
+| 310 | Minimum Height Trees | [cpp](cpp/310.cpp) | medium |
 | 311 | Sparse Matrix Multiplication |  | medium |
 | 312 | Burst Balloons |  | hard |
 | 313 | Super Ugly Number | [cpp](cpp/313.cpp) | medium |
 | 314 | Binary Tree Vertical Order Traversal |  | medium |
-| 315 | Count of Smaller Numbers After Self |  | hard |
+| 315 | Count of Smaller Numbers After Self | [cpp](cpp/315.cpp) | hard |
 | 316 | Remove Duplicate Letters | [cpp](cpp/316.cpp) | medium |
 | 317 | Shortest Distance from All Buildings |  | hard |
 | 318 | Maximum Product of Word Lengths | [cpp](cpp/318.cpp) | medium |
 | 319 | Bulb Switcher | [cpp](cpp/319.cpp) | medium |
 | 320 | Generalized Abbreviation |  | medium |
-| 321 | Create Maximum Number |  | hard |
+| 321 | Create Maximum Number | [cpp](cpp/321.cpp) | hard |
 | 322 | Coin Change | [cpp](cpp/322.cpp) | medium |
 | 323 | Number of Connected Components in an Undirected Graph |  | medium |
 | 324 | Wiggle Sort II | [cpp](cpp/324.cpp) | medium |
@@ -349,7 +349,7 @@ my solution for LeetCode
 | 338 | Counting Bits | [cpp](cpp/338.cpp) | easy |
 | 339 | Nested List Weight Sum |  | medium |
 | 340 | Longest Substring with At Most K Distinct Characters |  | medium |
-| 341 | Flatten Nested List Iterator |  | medium |
+| 341 | Flatten Nested List Iterator | [cpp](cpp/341.cpp) | medium |
 | 342 | Power of Four | [cpp](cpp/342.cpp) | easy |
 | 343 | Integer Break | [cpp](cpp/343.cpp) | medium |
 | 344 | Reverse String | [cpp](cpp/344.cpp) | easy |
@@ -393,7 +393,7 @@ my solution for LeetCode
 | 382 | Linked List Random Node | [cpp](cpp/382.cpp) | medium |
 | 383 | Ransom Note | [cpp](cpp/383.cpp) | easy |
 | 384 | Shuffle an Array | [cpp](cpp/384.cpp) | medium |
-| 385 | Mini Parser |  | medium |
+| 385 | Mini Parser | [cpp](cpp/385.cpp) | medium |
 | 386 | Lexicographical Numbers | [cpp](cpp/386.cpp) | medium |
 | 387 | First Unique Character in a String | [cpp](cpp/387.cpp) | easy |
 | 388 | Longest Absolute File Path | [cpp](cpp/388.cpp) | medium |
@@ -435,10 +435,10 @@ my solution for LeetCode
 | 424 | Longest Repeating Character Replacement | [cpp](cpp/424.cpp) | medium |
 | 425 | Word Squares |  | hard |
 | 432 | All O`one Data Structure |  | hard |
-| 433 | Minimum Genetic Mutation |  | medium |
+| 433 | Minimum Genetic Mutation | [cpp](cpp/433.cpp) | medium |
 | 434 | Number of Segments in a String | [cpp](cpp/434.cpp) | easy |
-| 435 | Non-overlapping Intervals |  | medium |
-| 436 | Find Right Interval |  | medium |
+| 435 | Non-overlapping Intervals | [cpp](cpp/435.cpp) | medium |
+| 436 | Find Right Interval | [cpp](cpp/436.cpp) | medium |
 | 437 | Path Sum III | [cpp](cpp/437.cpp) | medium |
 | 438 | Find All Anagrams in a String | [cpp](cpp/438.cpp) | medium |
 | 439 | Ternary Expression Parser |  | medium |
@@ -469,31 +469,31 @@ my solution for LeetCode
 | 464 | Can I Win | [cpp](cpp/464.cpp) | medium |
 | 465 | Optimal Account Balancing |  | hard |
 | 466 | Count The Repetitions |  | hard |
-| 467 | Unique Substrings in Wraparound String |  | medium |
-| 468 | Validate IP Address |  | medium |
+| 467 | Unique Substrings in Wraparound String | [cpp](cpp/467.cpp) | medium |
+| 468 | Validate IP Address | [cpp](cpp/468.cpp) | medium |
 | 469 | Convex Polygon |  | medium |
 | 471 | Encode String with Shortest Length |  | hard |
 | 472 | Concatenated Words |  | hard |
 | 473 | Matchsticks to Square | [cpp](cpp/473.cpp) | medium |
-| 474 | Ones and Zeroes |  | medium |
+| 474 | Ones and Zeroes | [cpp](cpp/474.cpp) | medium |
 | 475 | Heaters | [cpp](cpp/475.cpp) | medium |
 | 476 | Number Complement | [cpp](cpp/476.cpp) | easy |
 | 477 | Total Hamming Distance | [cpp](cpp/477.cpp) | medium |
 | 479 | Largest Palindrome Product |  | hard |
 | 480 | Sliding Window Median |  | hard |
-| 481 | Magical String |  | medium |
+| 481 | Magical String | [cpp](cpp/481.cpp) | medium |
 | 482 | License Key Formatting | [cpp](cpp/482.cpp) | easy |
 | 483 | Smallest Good Base |  | hard |
 | 484 | Find Permutation |  | medium |
 | 485 | Max Consecutive Ones | [cpp](cpp/485.cpp) | easy |
 | 486 | Predict the Winner |  | medium |
 | 487 | Max Consecutive Ones II |  | medium |
-| 488 | Zuma Game |  | hard |
+| 488 | Zuma Game | [cpp](cpp/488.cpp) | hard |
 | 489 | Kth Smallest Instructions |  | hard |
 | 490 | The Maze |  | medium |
 | 491 | Non-decreasing Subsequences | [cpp](cpp/491.cpp) | medium |
 | 492 | Construct the Rectangle | [cpp](cpp/492.cpp) | easy |
-| 493 | Reverse Pairs |  | hard |
+| 493 | Reverse Pairs | [cpp](cpp/493.cpp) | hard |
 | 494 | Target Sum | [cpp](cpp/494.cpp) | medium |
 | 495 | Teemo Attacking | [cpp](cpp/495.cpp) | easy |
 | 496 | Next Greater Element I | [cpp](cpp/496.cpp) | easy |
@@ -590,7 +590,7 @@ my solution for LeetCode
 | 593 | Valid Square | [cpp](cpp/593.cpp) | medium |
 | 594 | Longest Harmonious Subsequence | [cpp](cpp/594.cpp) | easy |
 | 595 | Big Countries |  | easy |
-| 596 | Classes More Than 5 Students |  | easy |
+| 596 | Classes With at Least 5 Students |  | easy |
 | 597 | Friend Requests I: Overall Acceptance Rate |  | easy |
 | 598 | Range Addition II | [cpp](cpp/598.cpp) | easy |
 | 599 | Minimum Index Sum of Two Lists | [cpp](cpp/599.cpp) | easy |
@@ -633,7 +633,7 @@ my solution for LeetCode
 | 637 | Average of Levels in Binary Tree | [cpp](cpp/637.cpp) | easy |
 | 638 | Shopping Offers |  | medium |
 | 639 | Decode Ways II |  | hard |
-| 640 | Solve the Equation |  | medium |
+| 640 | Solve the Equation | [cpp](cpp/640.cpp) | medium |
 | 642 | Design Search Autocomplete System |  | hard |
 | 643 | Maximum Average Subarray I | [cpp](cpp/643.cpp) | easy |
 | 644 | Maximum Average Subarray II |  | hard |
@@ -762,7 +762,7 @@ my solution for LeetCode
 | 778 | Reorganize String |  | medium |
 | 779 | Max Chunks To Make Sorted II |  | hard |
 | 780 | Max Chunks To Make Sorted |  | medium |
-| 781 | Basic Calculator IV |  | hard |
+| 781 | Basic Calculator IV | [cpp](cpp/781.cpp) | hard |
 | 782 | Jewels and Stones |  | easy |
 | 783 | Search in a Binary Search Tree | [cpp](cpp/783.cpp) | easy |
 | 784 | Insert into a Binary Search Tree | [cpp](cpp/784.cpp) | medium |
@@ -822,7 +822,7 @@ my solution for LeetCode
 | 838 | Design Linked List |  | medium |
 | 839 | Short Encoding of Words |  | medium |
 | 841 | Shortest Distance to a Character | [cpp](cpp/841.cpp) | easy |
-| 842 | Card Flipping Game |  | medium |
+| 842 | Card Flipping Game | [cpp](cpp/842.cpp) | medium |
 | 843 | Binary Trees With Factors |  | medium |
 | 850 | Insert into a Sorted Circular Linked List |  | medium |
 | 851 | Goat Latin |  | easy |
@@ -833,7 +833,7 @@ my solution for LeetCode
 | 856 | Consecutive Numbers Sum |  | hard |
 | 857 | Positions of Large Groups |  | easy |
 | 858 | Masking Personal Information |  | medium |
-| 859 | Design Circular Deque |  | medium |
+| 859 | Design Circular Deque | [cpp](cpp/859.cpp) | medium |
 | 860 | Design Circular Queue | [cpp](cpp/860.cpp) | medium |
 | 861 | Flipping an Image |  | easy |
 | 862 | Find And Replace in String |  | medium |
